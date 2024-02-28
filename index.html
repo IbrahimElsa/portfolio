@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
     <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" integrity="sha384-fb+8zKtRHODlJQlvniIZFB3/ZaZhs43lGViV5E7Ll9WLBQpqs1F+J2ewUq1qeH6o" crossorigin="anonymous">
 </head>
 <body class="bg-zinc-900">
     <header class="pt-7 pl-5 pr-5 ">
-        <nav class="bg-red-600 text-white px-6 py-4 shadow-md rounded-full">
-            <ul class="flex space-x-4">
-                <li><a href="#about" class="hover:text-gray-300">About</a></li>
-                <li><a href="#projects" class="hover:text-gray-300">Projects</a></li>
-                <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+        <nav class="bg-red-600 text-white px-6 py-4 shadow-md rounded-full w-full">
+            <ul class="flex justify-between items-center w-full">
+                <div class="flex space-x-4">
+                    <li><a href="#about" class="hover:text-gray-300">About</a></li>
+                    <li><a href="#projects" class="hover:text-gray-300">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+                </div>
+                <li><a href="https://github.com/IbrahimElsa" class="hover:text" target="_blank"><i class="fab fa-github fa-2x"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -23,17 +27,30 @@
             <img src="egg.jpg" alt="Your description" class="rounded-full h-[20rem] w-auto object-cover mx-auto lg:mx-0 ">
         </div>
         <div class="order-2 lg:order-1 lg:col-start-3 lg:col-span-5 flex flex-col justify-center text-center lg:text-left">
-            <h1 class="font-bold text-6xl whitespace-nowrap">Ibrahim Elsawalhi</h1>
+            <h1 class="font-bold text-6xl lg:whitespace-nowrap">Ibrahim Elsawalhi</h1>
+        </div>
+    </section>
+    <section id="skills" class="text-gray-100 px-10 h-auto grid lg:grid-cols-12 items-center">
+        <h1 class="text-xl font-bold mb-12">Technologies</h1>
+        <div class="lg:col-start-3 lg:col-span-8 flex flex-wrap justify-between">
+            <i class="fab fa-html5 m-4 text-4xl"></i>
+            <i class="fab fa-css3-alt m-4 text-4xl"></i>
+            <i class="fab fa-js-square m-4 text-4xl"></i>
+            <i class="fab fa-react m-4 text-4xl"></i>
+            <i class="fas fa-database m-4 text-4xl"></i> <!-- For NoSQL -->
+            <i class="fas fa-leaf m-4 text-4xl"></i> <!-- For MongoDB -->
+            <!-- Add more icons as needed -->
         </div>
     </section>
     <section id="projects" class="text-white px-10 py-8">
         <h2 class="text-xl font-bold mb-6">Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div class="project bg-gray-800 p-6 rounded-lg shadow-lg">
-                <h3 class="text-white">Project Title</h3>
-                <p>Project Description...</p>
-                <a href="project-link.html" class="text-blue-400 hover:text-blue-300">View Project</a>
-            </div>
+                <h3 class="text-white font-bold">Gym E-commerce Page</h3>
+                <a href="https://rossthesloth-gym.netlify.app" target="_blank">
+                    <img src="Gym-page.png" alt="Gym-page" class="rounded-lg w-full h-48 object-cover mt-4 mb-4 transform hover:scale-105 transition-transform duration-200">
+                </a>
+                <p>Created a gym equipment ecommerce store, using HTML, CSS, and JavaScript. I used Bootstrap as a library for the page, and MongoDB as a database for the products.</p>            </div>
             <!-- Repeat for other projects -->
         </div>
     </section>
