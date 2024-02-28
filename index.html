@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" integrity="sha384-fb+8zKtRHODlJQlvniIZFB3/ZaZhs43lGViV5E7Ll9WLBQpqs1F+J2ewUq1qeH6o" crossorigin="anonymous">
 </head>
 <body class="bg-zinc-900">
-    <header class="pt-7 pl-5 pr-5">
+    <header class="pt-7 pl-5 pr-5 ">
         <nav class="bg-red-600 text-white px-6 py-4 shadow-md rounded-full">
             <ul class="flex space-x-4">
                 <li><a href="#about" class="hover:text-gray-300">About</a></li>
@@ -18,9 +18,12 @@
             </ul>
         </nav>
     </header>
-    <section id="about" class="text-gray-100 px-10 py-8 h-screen grid grid-cols-6 items-center">
-        <div class="col-start-2 flex flex-col justify-center">
-            <h1 class="font-bold text-7xl mb-4">Ibrahim Elsawalhi</h1>
+    <section id="about" class="text-gray-100 px-10 h-[90vh] grid lg:grid-cols-12 items-center">
+        <div class="order-1 lg:order-2 lg:col-start-9 lg:col-span-5 flex items-center">
+            <img src="egg.jpg" alt="Your description" class="rounded-full h-[20rem] w-auto object-cover mx-auto lg:mx-0 ">
+        </div>
+        <div class="order-2 lg:order-1 lg:col-start-3 lg:col-span-5 flex flex-col justify-center text-center lg:text-left">
+            <h1 class="font-bold text-6xl whitespace-nowrap">Ibrahim Elsawalhi</h1>
         </div>
     </section>
     <section id="projects" class="text-white px-10 py-8">
