@@ -8,17 +8,23 @@
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" integrity="sha384-fb+8zKtRHODlJQlvniIZFB3/ZaZhs43lGViV5E7Ll9WLBQpqs1F+J2ewUq1qeH6o" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body class="bg-zinc-900">
     <header class="pt-7 pl-5 pr-5 ">
-        <nav class="bg-red-600 text-white px-6 py-4 shadow-md rounded-full w-full">
+        <nav class="bg-red-600 text-white px-6 py-4 shadow-md rounded-full w-full " data-aos="fade-down">
             <ul class="flex justify-between items-center w-full">
                 <div class="flex space-x-4">
                     <li><a href="#about" class="hover:text-gray-300">About</a></li>
                     <li><a href="#projects" class="hover:text-gray-300">Projects</a></li>
                     <li><a href="#" id="contactLink" class="hover:text-gray-300">Contact</a></li>
                 </div>
-                <li><a href="https://github.com/IbrahimElsa" class="hover:text" target="_blank"><i class="fab fa-github fa-2x  transform hover:scale-115 transition-transform duration-200"></i></a></li>
+                <li>
+                    <a href="https://github.com/IbrahimElsa" class="hover:text-gray-300 flex items-center" target="_blank">
+                        <i class="devicon-github-original text-3xl transform hover:scale-110 transition-transform duration-200"></i>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -32,22 +38,22 @@
     </section>
     <section id="skills" class="text-gray-100 px-10 h-auto grid lg:grid-cols-12 items-center">
         <h1 class="text-xl font-bold mb-12">Technologies</h1>
-        <div class="lg:col-start-3 lg:col-span-8 flex flex-wrap justify-between text-6xl">
-            <div><i class="devicon-html5-plain"></i></div>
-            <div><i class="devicon-css3-plain"></i></div>
-            <div><i class="devicon-javascript-plain"></i></div>
-            <div><i class="devicon-react-original"></i></div>
-            <div><i class="devicon-java-plain"></i></div>
-            <div><i class="devicon-python-plain"></i></div>
-            <div><i class="devicon-mongodb-plain"></i></div>
-            <div><i class="devicon-mysql-plain"></i></div>
-            <div><i class="devicon-tailwindcss-plain"></i></div>
+        <div class="lg:col-start-3 lg:col-span-9 flex flex-wrap justify-between text-6xl gap-y-8 my-8 sm:space-x-2 md:space-x-4 lg:space-x-6">
+            <div><i class="devicon-html5-plain" data-aos="fade-up" data-aos-delay="100"></i></div>
+            <div><i class="devicon-css3-plain" data-aos="fade-up" data-aos-delay="150"></i></div>
+            <div><i class="devicon-javascript-plain" data-aos="fade-up" data-aos-delay="200"></i></div>
+            <div><i class="devicon-react-original" data-aos="fade-up" data-aos-delay="250"></i></div>
+            <div><i class="devicon-java-plain" data-aos="fade-up" data-aos-delay="300"></i></div>
+            <div><i class="devicon-python-plain" data-aos="fade-up" data-aos-delay="350"></i></div>
+            <div><i class="devicon-mongodb-plain" data-aos="fade-up" data-aos-delay="400"></i></div>
+            <div><i class="devicon-mysql-plain" data-aos="fade-up" data-aos-delay="450"></i></div>
+            <div><i class="devicon-tailwindcss-plain" data-aos="fade-up" data-aos-delay="500"></i></div>
         </div>
     </section>
     <section id="projects" class="text-white px-10 py-8">
         <h2 class="text-xl font-bold mb-6">Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="project bg-gray-800 p-6 rounded-lg shadow-lg">
+            <div class="project bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="fade-right">
                 <h3 class="text-white font-bold">Gym E-commerce Page</h3>
                 <a href="https://rossthesloth-gym.netlify.app" target="_blank">
                     <img src="Gym-page.png" alt="Gym-page" class="rounded-lg w-full h-48 object-cover mt-4 mb-4 transform hover:scale-105 transition-transform duration-200">
@@ -56,7 +62,7 @@
             <!-- Repeat for other projects -->
         </div>
     </section>
-    <div id="contactModal" class="fixed inset-0 flex items-center justify-center" style="background-color: rgba(0,0,0,0.5); display: none;">
+    <div id="contactModal" class="fixed inset-0 grid place-items-center" style="background-color: rgba(0,0,0,0.5); display: none;">
         <div class="bg-white rounded shadow-lg max-w-xl mx-auto p-6 space-y-4">
             <div class="flex justify-between items-center">
                 <h5 class="font-bold uppercase text-gray-600">Contact</h5>
@@ -76,7 +82,9 @@
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" integrity="sha384-UiSJoM4q3zj3zJ2Zf+TKl9SFKdzCptRtTw0PDbX5BKaD4No1ie/vP5iKGx5V0R5Y" crossorigin="anonymous"></script>
     <script>
-        AOS.init();
+        AOS.init({
+        once:true,
+    });
     </script>
 </body>
 </html>
