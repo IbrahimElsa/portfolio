@@ -13,7 +13,7 @@
 </head>
 <body class="bg-zinc-900">
     <header class="pt-7 pl-5 pr-5 ">
-        <nav class="bg-red-600 text-white px-6 py-4 shadow-md rounded-full w-full " data-aos="fade-down">
+        <nav id="navbar" class="bg-red-600 text-white px-6 py-4 shadow-md rounded-full w-full " data-aos="fade-down">
             <ul class="flex justify-between items-center w-full">
                 <div class="flex space-x-4">
                     <li><a href="#about" class="hover:text-gray-300">About</a></li>
@@ -29,6 +29,7 @@
         </nav>
     </header>
     <section id="about" class="text-gray-100 px-10 h-[90vh] grid lg:grid-cols-12 items-center">
+        <canvas id="myCanvas"></canvas>
         <div class="order-1 lg:order-2 lg:col-start-9 lg:col-span-5 flex items-center">
             <img src="egg.jpg" alt="Your description" class="rounded-full h-[20rem] w-auto object-cover mx-auto lg:mx-0 ">
         </div>
