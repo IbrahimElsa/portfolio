@@ -1,37 +1,54 @@
-import { gsap } from 'gsap';
 
-particlesJS.load('particles-js', 'particles.json', function() {
-  console.log('callback - particles.js config loaded');
-});
-
-// Get the navbar
 var navbar = document.getElementById("navbar");
 
-// Animate the navbar
-gsap.from(navbar, {duration: 1, y: -100, ease: 'power2.out'});
-
-// Get the modal
 var modal = document.getElementById("contactModal");
 
-// Get the button that opens the modal
 var btn = document.getElementById("contactLink");
 
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
 btn.onclick = function() {
   gsap.to(modal, {autoAlpha: 1, scale: 1, duration: 1});
 }
 
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   gsap.to(modal, {autoAlpha: 0, scale: 0.8, duration: 1});
 }
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     gsap.to(modal, {autoAlpha: 0, scale: 0.8, duration: 1});
+  }
+}
+
+function App() {
+  const conf = {
+    nx: 40,
+    ny: 100,
+    cscale: chroma.scale(['red', '#B22222', '#7B3F00', '#404040', '#1C1C1C', '#000000']).mode('lch'),
+    darken: -1,
+    angle: Math.PI / 3,
+    timeCoef: 0.1
+  };
+
+  let renderer, scene, camera;
+  let width, height;
+  const { randFloat: rnd } = THREE.Math;
+
+  const uTime = { value: 0 }, uTimeCoef = { value: conf.timeCoef };
+  const polylines = [];
+
+  init();
+
+  function init() {
+    renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('canvas'), antialias: true });
+    camera = new THREE.PerspectiveCamera();
+
+    updateSize();
+    window.addEventListener('resize', updateSize, false);
+    document.body.addEventListener('click', initRandomScene);
+
+    initScene();
+    requestAnimationFrame(animate);
   }
 }
