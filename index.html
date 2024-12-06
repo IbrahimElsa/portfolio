@@ -10,77 +10,167 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" integrity="sha384-fb+8zKtRHODlJQlvniIZFB3/ZaZhs43lGViV5E7Ll9WLBQpqs1F+J2ewUq1qeH6o" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+
+    <style>
+        .bobbing-arrow {
+            animation: bob 1.5s infinite ease-in-out;
+        }
+        @keyframes bob {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(20px);
+            }
+        }
+    </style>
 
 </head>
-<body class="bg-zinc-900 absolute inset-0 bg-no-repeat bg-center bg-fixed" style="background-image: url('bg.svg'); z-index: -1;">
-    <header class="pt-7 pl-5 pr-5 z-10">
-        <nav id="navbar" class="bg-red-600 text-white px-6 py-4 shadow-md rounded-full w-full " data-aos="fade-down">
-            <ul class="flex justify-between items-center w-full">
-                <div class="flex space-x-4">
-                    <li><a href="#about" class="hover:text-gray-300">About</a></li>
-                    <li><a href="#projects" class="hover:text-gray-300">Projects</a></li>
-                    <li><a href="#" id="contactLink" class="hover:text-gray-300">Contact</a></li>
-                </div>
-                <li>
-                    <a href="https://github.com/IbrahimElsa" class="hover:text-gray-300 flex items-center">
-                        <i class="devicon-github-original text-3xl transform hover:scale-125 transition-transform duration-200"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <section id="about" class="relative text-gray-100 px-10 h-[90vh] grid lg:grid-cols-12 items-center ">
+<body class="bg-zinc-900 absolute inset-0 bg-no-repeat bg-center bg-fixed">
+
+    
+
+    <section id="about" class="relative text-gray-100 px-10 h-[90vh] flex items-center justify-center">
         <div class="absolute inset-0 bg-no-repeat bg-center bg-fixed" style="background-image: url('bg.svg'); z-index: -1;"></div>
-        <div class="order-1 lg:order-2 lg:col-start-9 lg:col-span-5 flex items-center z-10">
-            <img src="egg.jpg" alt="Your description" class="rounded-full h-[20rem] w-auto object-cover mx-auto lg:mx-0 ">
-        </div>
-        <div class="order-2 lg:order-1 lg:col-start-3 lg:col-span-5 flex flex-col justify-center text-center lg:text-left z-10">
-            <h1 class="font-bold text-6xl lg:whitespace-nowrap">Ibrahim Elsawalhi</h1>
+        
+        <div class="flex items-center space-x-12">
+            <div class="text-left">
+                <h1 class="font-bold text-8xl lg:whitespace-nowrap">Ibrahim Elsawalhi</h1>
+                <h2 class="text-4xl lg:whitespace-nowrap mt-2">Full Stack Developer</h2>
+            </div>
+    
+            <div class="flex flex-col space-y-6 pl-10">
+                <a href="https://github.com/IbrahimElsa" target="_blank" class="text-gray-100 hover:text-gray-300">
+                    <i class="devicon-github-original text-5xl transform hover:scale-110 transition-transform duration-200"></i>
+                </a>
+                <a href="https://linkedin.com/in/ibrahim-elsawalhi" target="_blank" class="text-gray-100 hover:text-gray-300 ">
+                    <i class="devicon-linkedin-plain text-5xl transform hover:scale-110 transition-transform duration-200"></i>
+                </a>
+                <a href="mailto:ibrahim@example.com" class="text-gray-100 hover:text-gray-300">
+                    <i class="fas fa-envelope text-5xl transform hover:scale-110 transition-transform duration-200"></i>
+                </a>
+            </div>
         </div>
     </section>
-    <section id="skills" class="text-gray-100 px-10 h-auto grid lg:grid-cols-12 items-center">
-        <h1 class="text-xl font-bold mb-12 lg:col-start-1 lg:col-span-9">Technologies</h1>
-        <div class="lg:col-start-3 lg:col-span-9 grid grid-rows-2 grid-flow-col gap-4 sm:gap-6 md:gap-8 lg:gap-10 my-8 text-5xl md:text-6xl lg:text-7xl justify-between relative p-5">
-            <div class="absolute inset-0 bg-zinc-400 bg-opacity-50 blur-sm border-8 border-white -m-20 rounded-2xl" data-aos="fade-up" data-aos-delay="50"></div>
+
+    <div class="flex justify-center">
+        <button id="scrollArrow" class="text-gray-400 hover:text-gray-100 transition duration-200 focus:outline-none">
+            <svg class="w-10 h-10 bobbing-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+    </div>
+    
+    <section id="skills" class="text-gray-100 px-10 h-auto flex flex-col items-center mt-20">
+        <h1 class="text-6xl font-bold mb-12 text-center">Technologies</h1>
+        <div class="grid grid-rows-2 grid-flow-col gap-8 sm:gap-10 md:gap-12 lg:gap-16 my-8 text-5xl md:text-6xl lg:text-7xl justify-center items-center">
             <i class="devicon-html5-plain relative z-10" data-aos="fade-up" data-aos-delay="100"></i>
             <i class="devicon-css3-plain relative z-10" data-aos="fade-up" data-aos-delay="150"></i>
             <i class="devicon-javascript-plain relative z-10" data-aos="fade-up" data-aos-delay="200"></i>
             <i class="devicon-react-original relative z-10" data-aos="fade-up" data-aos-delay="250"></i>
             <i class="devicon-python-plain relative z-10" data-aos="fade-up" data-aos-delay="350"></i>
             <i class="devicon-mongodb-plain relative z-10" data-aos="fade-up" data-aos-delay="400"></i>
-            <i class="devicon-mysql-plain relative z-10" data-aos="fade-up" data-aos-delay="450"></i>
-            <i class="devicon-tailwindcss-plain relative z-10" data-aos="fade-up" data-aos-delay="500"></i>
+            <i class="devicon-nodejs-plain relative z-10" data-aos="fade-up" data-aos-delay="450"></i>
+            <i class="devicon-firebase-plain relative z-10" data-aos="fade-up" data-aos-delay="500"></i>
+            <i class="devicon-mysql-plain relative z-10" data-aos="fade-up" data-aos-delay="550"></i>
+            <i class="devicon-tailwindcss-plain relative z-10" data-aos="fade-up" data-aos-delay="600"></i>
+            <i class="devicon-bootstrap-plain relative z-10" data-aos="fade-up" data-aos-delay="650"></i>     
+            <i class="devicon-csharp-plain relative z-10" data-aos="fade-up" data-aos-delay="700"></i>
         </div>
     </section>
-    <section id="projects" class="text-white px-10 py-8">
-        <h2 class="text-xl font-bold mb-6">Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="project bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="fade-right">
-                <h3 class="text-white font-bold">Gym E-commerce Page</h3>
-                <a href="https://rossthesloth-gym.netlify.app" target="_blank">
-                    <img src="Gym-page.png" alt="Gym-page" class="rounded-lg w-full h-48 object-cover mt-4 mb-4 transform hover:scale-105 transition-transform duration-200">
-                </a>
-                <p>Created a gym equipment ecommerce store, using HTML, CSS, and JavaScript. I used Bootstrap as a library for the page, and MongoDB as a database for the products.</p>            </div>
-            <!-- Repeat for other projects -->
+    <section id="projects" class="text-white px-10 py-8 mt-40">
+        <h2 class="text-6xl font-bold mb-12 text-center">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a href="https://rossthesloth-gym.netlify.app" target="_blank" class="project relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                <div class="absolute inset-0 z-0 overflow-hidden">
+                    <img src="Gym-page.png" alt="Gym-page" 
+                         class="w-full h-full object-cover transition-transform duration-300 transform scale-110 group-hover:scale-125">
+                    <div class="absolute inset-0 bg-black opacity-60"></div>
+                </div>
+            
+                
+                <div class="relative z-10 p-6 pt-48 h-full flex flex-col justify-end text-white">
+                    <h3 class="text-2xl font-bold mb-4">Gym E-commerce Page</h3>
+                    <div class="flex flex-wrap items-center gap-4 mb-2 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <i class="devicon-html5-plain text-2xl"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="devicon-css3-plain text-2xl"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="devicon-javascript-plain text-2xl"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="devicon-bootstrap-plain text-2xl"></i>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="devicon-mongodb-plain text-2xl"></i>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://fitness-app-00.web.app" target="_blank" class="project relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                <div class="absolute inset-0 z-0 overflow-hidden">
+                    <img src="LogoFitnessApp.webp" alt="Fitness App Logo" 
+                         class="w-full h-full object-cover transition-transform duration-300 transform scale-110 group-hover:scale-125">
+                    <div class="absolute inset-0 bg-black opacity-60"></div>
+                </div>
+            
+                
+                <div class="relative z-10 p-6 pt-48 h-full flex flex-col justify-end text-white">
+                    <h3 class="text-2xl font-bold mb-4">Fitness Tracker</h3>
+                    <div class="flex flex-wrap items-center gap-4 mb-2 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <i class="devicon-react-original text-2xl"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="devicon-css3-plain text-2xl"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="devicon-javascript-plain text-2xl"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="devicon-tailwindcss-original text-2xl"></i>
+                            <span>Tailwind</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="devicon-firebase-plain text-2xl"></i>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/IbrahimElsa/Project1_Stocks" target="_blank" class="project relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                <div class="absolute inset-0 z-0 overflow-hidden">
+                    <img src="StocksProjectSS.png" alt="Stocks Analysis Chart" 
+                         class="w-full h-full object-cover transition-transform duration-300 transform scale-110 group-hover:scale-125">
+                    <div class="absolute inset-0 bg-black opacity-60"></div>
+                </div>
+            
+                
+                <div class="relative z-10 p-6 pt-48 h-full flex flex-col justify-end text-white">
+                    <h3 class="text-2xl font-bold mb-4">Stocks Analysis Chart</h3>
+                    <div class="flex flex-wrap items-center gap-4 mb-2 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <i class="devicon-csharp-plain text-2xl"></i>
+                            <span>C#</span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
     </section>
-    <div id="contactModal" class="fixed inset-0 grid place-items-center" style="background-color: rgba(0,0,0,0.5); display: none;">
-        <div class="bg-white rounded shadow-lg max-w-xl mx-auto p-6 space-y-4">
-            <div class="flex justify-between items-center">
-                <h5 class="font-bold uppercase text-gray-600">Contact</h5>
-                <button class="text-black close focus:outline-none">&times;</button>
-            </div>
-            <form id="contactForm">
-                <input type="text" placeholder="Your Name" class="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none">
-                <input type="email" placeholder="Your Email" class="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none">
-                <textarea placeholder="Your Message" class="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none"></textarea>
-                <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none">Send</button>
-            </form>
-        </div>
-    </div>
-    <footer class="text-gray-400 text-center p-4">
-        <p>© Ibrahim Elsawalhi. All rights reserved.</p>
-    </footer>
     <script type="module" src="script.js"></script>
         <script>
         AOS.init({
