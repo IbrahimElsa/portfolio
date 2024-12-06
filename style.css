@@ -1,3 +1,76 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+
+/* Modify the existing project cards to add colored technology icon transitions */
+.project {
+    /* Base state: grayscale icons */
+    .devicon-html5-plain,
+    .devicon-css3-plain,
+    .devicon-javascript-plain,
+    .devicon-react-original,
+    .devicon-python-plain,
+    .devicon-mongodb-plain,
+    .devicon-nodejs-plain,
+    .devicon-firebase-plain,
+    .devicon-mysql-plain,
+    .devicon-tailwindcss-original,
+    .devicon-bootstrap-plain,
+    .devicon-csharp-plain {
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+    }
+
+    /* Hover state: remove grayscale and add colors */
+    &:hover {
+        .devicon-html5-plain {
+            filter: grayscale(0%);
+            color: #E34F26;
+        }
+        .devicon-css3-plain {
+            filter: grayscale(0%);
+            color: #1572B6;
+        }
+        .devicon-javascript-plain {
+            filter: grayscale(0%);
+            color: #F7DF1E;
+        }
+        .devicon-react-original {
+            filter: grayscale(0%);
+            color: #61DAFB;
+        }
+        .devicon-python-plain {
+            filter: grayscale(0%);
+            color: #3776AB;
+        }
+        .devicon-mongodb-plain {
+            filter: grayscale(0%);
+            color: #47A248;
+        }
+        .devicon-nodejs-plain {
+            filter: grayscale(0%);
+            color: #339933;
+        }
+        .devicon-firebase-plain {
+            filter: grayscale(0%);
+            color: #FFCA28;
+        }
+        .devicon-mysql-plain {
+            filter: grayscale(0%);
+            color: #4479A1;
+        }
+        .devicon-tailwindcss-original {
+            filter: grayscale(0%);
+            color: #06B6D4;
+        }
+        .devicon-bootstrap-plain {
+            filter: grayscale(0%);
+            color: #7952B3;
+        }
+        .devicon-csharp-plain {
+            filter: grayscale(0%);
+            color: #239120;
+        }
+    }
+}
