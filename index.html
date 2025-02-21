@@ -13,6 +13,8 @@
     <script type="module" src="tracker.js"></script>
 
     
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <style>
         .bobbing-arrow {
             animation: bob 1.5s infinite ease-in-out;
@@ -26,30 +28,26 @@
             }
         }
     </style>
-
 </head>
 <body class="bg-zinc-900 absolute inset-0 bg-no-repeat bg-center bg-fixed">
-
-    
-
-    <section id="about" class="relative text-gray-100 px-10 h-[90vh] flex items-center justify-center">
+    <section id="about" class="relative text-gray-100 px-4 sm:px-10 h-screen flex items-center justify-center -mb-20">
         <div class="absolute inset-0 bg-no-repeat bg-center bg-fixed" style="background-image: url('bg.svg'); z-index: -1;"></div>
         
-        <div class="flex items-center space-x-12">
-            <div class="text-left">
-                <h1 class="font-bold text-8xl lg:whitespace-nowrap">Ibrahim Elsawalhi</h1>
-                <h2 class="text-4xl lg:whitespace-nowrap mt-2">Full Stack Developer</h2>
+        <div class="flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-12 text-center sm:text-left">
+            <div>
+                <h1 class="font-bold text-4xl sm:text-6xl md:text-8xl lg:whitespace-nowrap">Ibrahim Elsawalhi</h1>
+                <h2 class="text-2xl sm:text-4xl lg:whitespace-nowrap mt-2">Full Stack Developer</h2>
             </div>
     
-            <div class="flex flex-col space-y-6 pl-10">
+            <div class="flex flex-row sm:flex-col space-x-6 sm:space-x-0 sm:space-y-6 sm:pl-10">
                 <a href="https://github.com/IbrahimElsa" target="_blank" class="text-gray-100 hover:text-gray-300">
-                    <i class="devicon-github-original text-5xl transform hover:scale-110 transition-transform duration-200"></i>
+                    <i class="devicon-github-original text-4xl sm:text-5xl transform hover:scale-110 transition-transform duration-200"></i>
                 </a>
                 <a href="https://linkedin.com/in/ibrahim-elsawalhi" target="_blank" class="text-gray-100 hover:text-gray-300 ">
-                    <i class="devicon-linkedin-plain text-5xl transform hover:scale-110 transition-transform duration-200"></i>
+                    <i class="devicon-linkedin-plain text-4xl sm:text-5xl transform hover:scale-110 transition-transform duration-200"></i>
                 </a>
                 <a href="mailto:ibrahim@example.com" class="text-gray-100 hover:text-gray-300">
-                    <i class="fas fa-envelope text-5xl transform hover:scale-110 transition-transform duration-200"></i>
+                    <i class="fas fa-envelope text-4xl sm:text-5xl transform hover:scale-110 transition-transform duration-200"></i>
                 </a>
             </div>
         </div>
@@ -57,31 +55,90 @@
 
     <div class="flex justify-center">
         <button id="scrollArrow" class="text-gray-400 hover:text-gray-100 transition duration-200 focus:outline-none">
-            <svg class="w-10 h-10 bobbing-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="w-8 h-8 sm:w-10 sm:h-10 bobbing-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
         </button>
     </div>
+    <section id="skills" class="text-gray-100 px-4 sm:px-10 h-auto flex flex-col items-center mt-20">
+        <h1 class="text-4xl sm:text-6xl font-bold mb-20 text-center">Technologies</h1>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-8 sm:gap-10 md:gap-12 w-full max-w-6xl">
+            <!-- HTML5 -->
+            <div class="group flex flex-col items-center space-y-2" data-aos="fade-up" data-aos-delay="100">
+                <i class="devicon-html5-plain text-6xl sm:text-7xl grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:text-[#E34F26]"></i>
+                <span class="text-sm sm:text-base font-medium">HTML5</span>
+            </div>
     
-    <section id="skills" class="text-gray-100 px-10 h-auto flex flex-col items-center mt-20">
-        <h1 class="text-6xl font-bold mb-12 text-center">Technologies</h1>
-        <div class="grid grid-rows-2 grid-flow-col gap-8 sm:gap-10 md:gap-12 lg:gap-16 my-8 text-5xl md:text-6xl lg:text-7xl justify-center items-center">
-            <i class="devicon-html5-plain relative z-10" data-aos="fade-up" data-aos-delay="100"></i>
-            <i class="devicon-css3-plain relative z-10" data-aos="fade-up" data-aos-delay="150"></i>
-            <i class="devicon-javascript-plain relative z-10" data-aos="fade-up" data-aos-delay="200"></i>
-            <i class="devicon-react-original relative z-10" data-aos="fade-up" data-aos-delay="250"></i>
-            <i class="devicon-python-plain relative z-10" data-aos="fade-up" data-aos-delay="350"></i>
-            <i class="devicon-mongodb-plain relative z-10" data-aos="fade-up" data-aos-delay="400"></i>
-            <i class="devicon-nodejs-plain relative z-10" data-aos="fade-up" data-aos-delay="450"></i>
-            <i class="devicon-firebase-plain relative z-10" data-aos="fade-up" data-aos-delay="500"></i>
-            <i class="devicon-mysql-plain relative z-10" data-aos="fade-up" data-aos-delay="550"></i>
-            <i class="devicon-tailwindcss-plain relative z-10" data-aos="fade-up" data-aos-delay="600"></i>
-            <i class="devicon-bootstrap-plain relative z-10" data-aos="fade-up" data-aos-delay="650"></i>     
-            <i class="devicon-csharp-plain relative z-10" data-aos="fade-up" data-aos-delay="700"></i>
+            <!-- CSS3 -->
+            <div class="group flex flex-col items-center space-y-2" data-aos="fade-up" data-aos-delay="150">
+                <i class="devicon-css3-plain text-6xl sm:text-7xl grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:text-[#1572B6]"></i>
+                <span class="text-sm sm:text-base font-medium">CSS3</span>
+            </div>
+    
+            <!-- JavaScript -->
+            <div class="group flex flex-col items-center space-y-2" data-aos="fade-up" data-aos-delay="200">
+                <i class="devicon-javascript-plain text-6xl sm:text-7xl grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:text-[#F7DF1E]"></i>
+                <span class="text-sm sm:text-base font-medium">JavaScript</span>
+            </div>
+    
+            <!-- React -->
+            <div class="group flex flex-col items-center space-y-2" data-aos="fade-up" data-aos-delay="250">
+                <i class="devicon-react-original text-6xl sm:text-7xl grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:text-[#61DAFB]"></i>
+                <span class="text-sm sm:text-base font-medium">React</span>
+            </div>
+    
+            <!-- Python -->
+            <div class="group flex flex-col items-center space-y-2" data-aos="fade-up" data-aos-delay="300">
+                <i class="devicon-python-plain text-6xl sm:text-7xl grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:text-[#3776AB]"></i>
+                <span class="text-sm sm:text-base font-medium">Python</span>
+            </div>
+    
+            <!-- Node.js -->
+            <div class="group flex flex-col items-center space-y-2" data-aos="fade-up" data-aos-delay="350">
+                <i class="devicon-nodejs-plain text-6xl sm:text-7xl grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:text-[#339933]"></i>
+                <span class="text-sm sm:text-base font-medium">Node.js</span>
+            </div>
+    
+            <!-- MongoDB -->
+            <div class="group flex flex-col items-center space-y-2" data-aos="fade-up" data-aos-delay="400">
+                <i class="devicon-mongodb-plain text-6xl sm:text-7xl grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:text-[#47A248]"></i>
+                <span class="text-sm sm:text-base font-medium">MongoDB</span>
+            </div>
+    
+            <!-- MySQL -->
+            <div class="group flex flex-col items-center space-y-2" data-aos="fade-up" data-aos-delay="450">
+                <i class="devicon-mysql-plain text-6xl sm:text-7xl grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:text-[#4479A1]"></i>
+                <span class="text-sm sm:text-base font-medium">MySQL</span>
+            </div>
+    
+            <!-- Firebase -->
+            <div class="group flex flex-col items-center space-y-2" data-aos="fade-up" data-aos-delay="500">
+                <i class="devicon-firebase-plain text-6xl sm:text-7xl grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:text-[#FFCA28]"></i>
+                <span class="text-sm sm:text-base font-medium">Firebase</span>
+            </div>
+    
+            <!-- Tailwind CSS -->
+            <div class="group flex flex-col items-center space-y-2" data-aos="fade-up" data-aos-delay="550">
+                <i class="devicon-tailwindcss-plain text-6xl sm:text-7xl grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:text-[#06B6D4]"></i>
+                <span class="text-sm sm:text-base font-medium">Tailwind CSS</span>
+            </div>
+    
+            <!-- Bootstrap -->
+            <div class="group flex flex-col items-center space-y-2" data-aos="fade-up" data-aos-delay="600">
+                <i class="devicon-bootstrap-plain text-6xl sm:text-7xl grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:text-[#7952B3]"></i>
+                <span class="text-sm sm:text-base font-medium">Bootstrap</span>
+            </div>
+    
+            <!-- C# -->
+            <div class="group flex flex-col items-center space-y-2" data-aos="fade-up" data-aos-delay="650">
+                <i class="devicon-csharp-plain text-6xl sm:text-7xl grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:text-[#239120]"></i>
+                <span class="text-sm sm:text-base font-medium">C#</span>
+            </div>
         </div>
     </section>
-    <section id="projects" class="text-white px-10 py-8 mt-40">
-        <h2 class="text-6xl font-bold mb-12 text-center">Projects</h2>
+
+    <section id="projects" class="text-white px-4 sm:px-10 py-8 sm:mt-40">
+        <h2 class="text-4xl sm:text-6xl font-bold mb-20 text-center -mt-16">Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <a href="https://rossthesloth-gym.netlify.app" target="_blank" class="project relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                 <div class="absolute inset-0 z-0 overflow-hidden">
@@ -89,29 +146,28 @@
                          class="w-full h-full object-cover transition-transform duration-300 transform scale-110 group-hover:scale-125">
                     <div class="absolute inset-0 bg-black opacity-60"></div>
                 </div>
-            
                 
                 <div class="relative z-10 p-6 pt-48 h-full flex flex-col justify-end text-white">
                     <h3 class="text-2xl font-bold mb-4">Gym E-commerce Page</h3>
-                    <div class="flex flex-wrap items-center gap-4 mb-2 text-sm">
+                    <div class="flex flex-wrap items-center gap-4 mb-2 text-xs sm:text-sm">
                         <div class="flex items-center space-x-2">
-                            <i class="devicon-html5-plain text-2xl"></i>
+                            <i class="devicon-html5-plain text-3xl sm:text-4xl"></i>
                             <span>HTML</span>
                         </div>
                         <div class="flex items-center space-x-2">
-                            <i class="devicon-css3-plain text-2xl"></i>
+                            <i class="devicon-css3-plain text-3xl sm:text-4xl"></i>
                             <span>CSS</span>
                         </div>
                         <div class="flex items-center space-x-2">
-                            <i class="devicon-javascript-plain text-2xl"></i>
+                            <i class="devicon-javascript-plain text-3xl sm:text-4xl"></i>
                             <span>JavaScript</span>
                         </div>
                         <div class="flex items-center space-x-2">
-                            <i class="devicon-bootstrap-plain text-2xl"></i>
+                            <i class="devicon-bootstrap-plain text-3xl sm:text-4xl"></i>
                             <span>Bootstrap</span>
                         </div>
                         <div class="flex items-center space-x-2">
-                            <i class="devicon-mongodb-plain text-2xl"></i>
+                            <i class="devicon-mongodb-plain text-3xl sm:text-4xl"></i>
                             <span>MongoDB</span>
                         </div>
                     </div>
@@ -123,29 +179,28 @@
                          class="w-full h-full object-cover transition-transform duration-300 transform scale-110 group-hover:scale-125">
                     <div class="absolute inset-0 bg-black opacity-60"></div>
                 </div>
-            
                 
                 <div class="relative z-10 p-6 pt-48 h-full flex flex-col justify-end text-white">
                     <h3 class="text-2xl font-bold mb-4">Fitness Tracker</h3>
-                    <div class="flex flex-wrap items-center gap-4 mb-2 text-sm">
+                    <div class="flex flex-wrap items-center gap-4 mb-2 text-xs sm:text-sm">
                         <div class="flex items-center space-x-2">
-                            <i class="devicon-react-original text-2xl"></i>
+                            <i class="devicon-react-original text-3xl sm:text-4xl"></i>
                             <span>React</span>
                         </div>
                         <div class="flex items-center space-x-2">
-                            <i class="devicon-css3-plain text-2xl"></i>
+                            <i class="devicon-css3-plain text-3xl sm:text-4xl"></i>
                             <span>CSS</span>
                         </div>
                         <div class="flex items-center space-x-2">
-                            <i class="devicon-javascript-plain text-2xl"></i>
+                            <i class="devicon-javascript-plain text-3xl sm:text-4xl"></i>
                             <span>JavaScript</span>
                         </div>
                         <div class="flex items-center space-x-2">
-                            <i class="devicon-tailwindcss-original text-2xl"></i>
+                            <i class="devicon-tailwindcss-original text-3xl sm:text-4xl"></i>
                             <span>Tailwind</span>
                         </div>
                         <div class="flex items-center space-x-2">
-                            <i class="devicon-firebase-plain text-2xl"></i>
+                            <i class="devicon-firebase-plain text-3xl sm:text-4xl"></i>
                             <span>Firebase</span>
                         </div>
                     </div>
@@ -157,15 +212,13 @@
                          class="w-full h-full object-cover transition-transform duration-300 transform scale-110 group-hover:scale-125">
                     <div class="absolute inset-0 bg-black opacity-60"></div>
                 </div>
-            
                 
                 <div class="relative z-10 p-6 pt-48 h-full flex flex-col justify-end text-white">
                     <h3 class="text-2xl font-bold mb-4">Stocks Analysis Chart</h3>
-                    <div class="flex flex-wrap items-center gap-4 mb-2 text-sm">
+                    <div class="flex flex-wrap items-center gap-4 mb-2 text-xs sm:text-sm">
                         <div class="flex items-center space-x-2">
-                            <i class="devicon-csharp-plain text-2xl"></i>
+                            <i class="devicon-csharp-plain text-3xl sm:text-4xl"></i>
                             <span>C#</span>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -173,10 +226,10 @@
         </div>
     </section>
     <script type="module" src="script.js"></script>
-        <script>
+    <script>
         AOS.init({
-        once:true,
-    });
+            once:true,
+        });
     </script>
 </body>
 </html>
